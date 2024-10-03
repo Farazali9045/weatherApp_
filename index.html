@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <title>Weather Web App</title>
+    <link rel="shortcut icon" href="weather_831268.png" type="image/x-icon">
+</head>
+<body>
+
+     
+    <section class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-white sm:text-5xl">
+              Weather Web App
+            </h2>
+            <p class="mt-4 text-xl text-gray-400">
+                Stay ahead of the weather with real-time updates, accurate forecasts, and personalized alerts at your fingertips
+            </p>
+          </div>
+      <!--dd-->
+     
+     
+        
+     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300 mb-12">
+
+        <input id="Search" type="text" class="w-full py-2 px-4 rounded-md text-gray-900 mb-8" placeholder="Enter your city">
+    
+        
+        <a href="#" id="submit" class="block w-full py-3 px-6 text-center rounded-md text-white font-medium bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600">
+          Search
+        </a>
+     </div>
+      
+     <!--dd-->
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+        
+      
+            <!-- Starter Plan -->
+            <div class="h-80 bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
+              <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-white">Temperature</h3>
+              </div>
+              <div class="mb-8 flex items-center">
+                <span class="text-5xl font-extrabold text-white" id="temp">22</span>
+                <span class="text-4xl font-medium text-gray-400">&deg;C</span>
+                <img style="height: 80px; margin-left: 8px;" alt="">
+              </div>
+              <ul class="mb-8 space-y-4 text-gray-400">
+                <li class="flex items-center">
+                  
+                  <span><span id="date">Oct 8</span>, <span id="time">11:02 AM</span></span>
+                </li>
+                 <li class="flex items-center">
+                  
+                  <span id="loc">London, GB</span>
+                </li>
+                <li class="flex items-center">
+                  
+                  <span id="condition">Cloud</span>
+                </li>
+              </ul>
+            
+
+            </div>
+      
+            <!-- Pro Plan -->
+            <div class="h-80 bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                <div class="mb-8">
+                  <h3 class="text-2xl font-semibold text-white">Humidity Info</h3>
+                </div>
+                <div class="mb-8">
+                  <span class="text-5xl font-extrabold text-white" id="humidity">61</span>
+                  <span class="text-4xl font-medium text-gray-400">%</span>
+                </div>
+                <ul class="mb-8 space-y-4 text-gray-400">
+                  <li class="flex items-center">
+                    
+                    <span>Wind Degree is <span id="windDegree">29 </span>&deg;</span>
+                  </li>
+                   <li class="flex items-center">
+                    
+                    <span>Feels like <span id="feels">26 </span>&deg;</span>
+                  </li>
+                  <li class="flex items-center">
+                    
+                    <span>Dew Point <span id="dew">25</span>&deg;</span>
+                  </li>
+                </ul>
+             
+              </div>
+      
+            <!-- Enterprise Plan -->
+            <div class="h-80 bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
+                <div class="mb-8">
+                  <h3 class="text-2xl font-semibold text-white">Wind Info</h3>
+                </div>
+                <div class="mb-8">
+                  <span class="text-5xl font-extrabold text-white" id="windKM">16</span>
+                  <span class="text-4xl font-medium text-gray-400">km/hr</span>
+                </div>
+                <ul class="mb-8 space-y-4 text-gray-400">
+                  <li class="flex items-center">
+                    
+                    <span>Wind Direction <span id="direction">North</span></span>
+                  </li>
+                   <li class="flex items-center">
+                    
+                    <span>Wind Chill <span id="windChill">25</span>&deg;</span>
+                  </li>
+                  <li class="flex items-center">
+                    
+                    <span>Pressure <span id="pressure">1002</span></span>
+                  </li>
+                </ul>
+             
+              </div>
+        </div>
+      </section>
+</body>
+<script src="weatherApi.js"></script>
+</html>
