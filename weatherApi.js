@@ -41,9 +41,14 @@ let btn = document.querySelector('#submit').addEventListener('click',function(){
          const d = new Date();
          let date = document.querySelector("#date")
          date.innerHTML = `${month[d.getMonth()]} ${d.getDate()}`
-
+         
+         let timeString = data.location.localtime
+         let timePart = timeString.split(' ')[1]; 
+         let hour = parseInt(timePart.split(':')[0], 10); 
+         let minute = parseInt(timePart.split(':')[1], 10);
          const time = document.querySelector("#time")
-         time.innerHTML = `${d.getHours()}:${d.getMinutes()} ${d.getHours>= 12 ? 'PM' : 'AM'}`
+         time.innerHTML = `${hour}:${minute} ${hour>= 12 ? 'PM' : 'AM'}`
+         console.log(hour,minute)
          let loc = document.querySelector("#loc")
          loc.innerHTML = `${data.location.name}, ${data.location.region}`
          let con = document.querySelector("#condition")
@@ -59,5 +64,4 @@ let btn = document.querySelector('#submit').addEventListener('click',function(){
         console.log(error)
     })
 })
-
 
